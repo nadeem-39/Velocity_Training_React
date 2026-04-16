@@ -1,0 +1,20 @@
+import { Route, Routes } from "react-router-dom";
+import BookList from "./pages/BookList";
+import StudentList from "./pages/StudentList";
+import Error404 from "./pages/Error404";
+import Home from "./pages/Home";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}>
+        {" "}
+      </Route>
+      <Route path="/students" element={<StudentList />}></Route>
+      <Route path="/books" element={<BookList />}></Route>
+      <Route path="/*" element={<Error404 />}></Route>
+    </Routes>
+  );
+}
+
+export default App;
